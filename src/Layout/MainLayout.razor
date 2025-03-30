@@ -4,13 +4,21 @@
     <FluentHeader>
         TauriBlazorGallery
     </FluentHeader>
-    <FluentStack Class="main" Orientation="Orientation.Horizontal" Width="100%">
+    <FluentStack Class="main" Orientation="Orientation.Horizontal" HorizontalGap="0" Width="100%">
         <NavMenu />
         <FluentBodyContent Class="body-content">
             <ErrorBoundary>
                 <ChildContent>
                     <div class="content">
-                        @Body
+                        <FluentCard AreaRestricted="false" Style="overflow: auto;">
+                            @Body
+
+                            <FluentToastProvider />
+                            <FluentDialogProvider />
+                            <FluentTooltipProvider />
+                            <FluentMessageBarProvider />
+                            <FluentMenuProvider />
+                        </FluentCard>
                     </div>
                 </ChildContent>
                 <ErrorContent Context="ex">
@@ -20,8 +28,8 @@
         </FluentBodyContent>
     </FluentStack>
     <FluentFooter>
-        <a href="https://www.fluentui-blazor.net" target="_blank">Documentation and demos</a>
+        <a href="https://www.fluentui-blazor.net" target="_blank">Documentation and demos (Blazor)</a>
         <FluentSpacer />
-        <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor" target="_blank">About Blazor</a>
+        <a href="https://tauri.app" target="_blank">About Tauri</a>
     </FluentFooter>
 </FluentLayout>
