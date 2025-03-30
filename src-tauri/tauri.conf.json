@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "tauriblazorgallery",
+  "productName": "TauriBlazorGallery",
   "version": "0.1.0",
   "identifier": "com.tauriblazorgallery.app",
   "build": {
@@ -13,9 +13,12 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "tauriblazorgallery",
+        "title": "Tauri Blazor Gallery",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 400,
+        "minHeight": 300,
+        "center": true
       }
     ],
     "security": {
